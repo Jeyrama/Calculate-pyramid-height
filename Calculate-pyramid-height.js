@@ -32,9 +32,8 @@ Examples:
 
 // Solution
 
-let pyramidHeight = function(n){
+let pyramidHeight = function(n) {
   let root = ~~((n * 3) ** (1/3));
-  
   return root * (root + 1) * (2*root+1) <= 6*n ? root : root-1;
 }
 
@@ -53,6 +52,5 @@ function pyramidHeight(n) {
     curLayer++;
     cubesLeft -= cubesNeeded;
   }
-  
   return layers;
 }
