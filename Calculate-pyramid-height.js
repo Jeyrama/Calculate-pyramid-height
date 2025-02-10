@@ -39,3 +39,20 @@ let pyramidHeight = function(n){
 }
 
 // or
+
+function pyramidHeight(n) {
+  let cubesLeft = n;
+  let layers = 0;
+  let curLayer = 1;
+  
+  while (cubesLeft) {
+    const cubesNeeded = Math.pow(curLayer, 2);
+    
+    if (cubesNeeded > cubesLeft) break;
+    layers++;
+    curLayer++;
+    cubesLeft -= cubesNeeded;
+  }
+  
+  return layers;
+}
