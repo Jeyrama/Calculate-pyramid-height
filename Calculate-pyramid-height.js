@@ -37,3 +37,5 @@ let pyramidHeight = function(n){
   
   return root * (root + 1) * (2*root+1) <= 6*n ? root : root-1;
 }
+
+// or
